@@ -20,7 +20,7 @@ class DoubleProbeHashMap(HashInterface.HashInterface):
                 return (True,j)
             self._collisions+=1
             i+=1
-            j = (i*( 181-(self._hash_function(j)%181))+j)%len(self._table)
+            j = (i*( self._prime-(self._hash_function(j)%self._prime))+j)%len(self._table)
     
     def _bucket_getitem(self,j,k):
         found,s = self._find_slot(j,k)

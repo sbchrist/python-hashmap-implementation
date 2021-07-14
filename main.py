@@ -20,9 +20,9 @@ def main():
     data = parse_text_file('in150.txt')
 
     file = open("out150.txt",'w+')
-    LinearDict = LinearProbeHashMap()
-    QuadDict = QuadProbeHashMap()
-    DoubleDict = DoubleProbeHashMap()
+    LinearDict = LinearProbeHashMap(cap =191,p=181)
+    QuadDict = QuadProbeHashMap(cap =191,p=181)
+    DoubleDict = DoubleProbeHashMap(cap =191,p=181)
 
 
     file.write("*** Random Order Start *** \n")
