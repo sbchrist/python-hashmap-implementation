@@ -23,8 +23,7 @@ def main():
     LinearDict = LinearProbeHashMap()
     QuadDict = QuadProbeHashMap()
     DoubleDict = DoubleProbeHashMap()
-    #DoubleDict[4] = 'hello'
-    #DoubleDict[195] = 'there'
+
 
     file.write("*** Random Order Start *** \n")
     for i in data:
@@ -47,46 +46,6 @@ def main():
     file.write(f' Doulbe collisions : {DoubleDict._collisions}\n')
     file.write("*** Random Order Stop *** \n",)
 
-    for i in LinearDict._table:
-        try:
-            print("key: ",i._key,"Value: ",i._value)
-        except AttributeError:
-            print('None')
-
-
-    data.sort()
-    LinearDictAsc = LinearProbeHashMap()
-    QuadDictAsc = QuadProbeHashMap()
-    DoubleDictAsc = DoubleProbeHashMap()
-
-    #file.write("*** Ascending Order Start *** \n")
-    #for i in data:
-#
-    #    linearPreCol = LinearDictAsc._collisions
-    #    LinearDictAsc[i] = i*2
-    #    file.write(f"{i} : {i*2}, collisions: {LinearDictAsc._collisions - linearPreCol} \n")
-#
-    #    QuadPreCol = QuadDictAsc._collisions
-    #    QuadDictAsc[i] = i*2
-    #    file.write(f"{i} : {i*2}, collisions: {QuadDictAsc._collisions - QuadPreCol} \n")
-#
-    #    DoublePreCol = DoubleDictAsc._collisions
-    #    DoubleDictAsc[i] = i*2
-    #    file.write(f"{i} : {i*2}, collisions: {DoubleDictAsc._collisions - DoublePreCol} \n")
-    #    file.write('\n')
-#
-    #file.write(f'Linear collisions : {LinearDictAsc._collisions}\n')
-    #file.write(f'Quadratic collisions : {QuadDictAsc._collisions}\n')
-    #file.write(f' Doulbe collisions : {DoubleDictAsc._collisions}\n')
-    #file.write("*** Ascending Order Stop *** \n",)
-
-
-    #for i in range(191):
-    #    DoubleDict[i] = i*2
-
-
-    #print('collisions : ',QuadDict._collisions)
-    #print('collisions : ',LinearDict._collisions)
-    #print('collisions : ',DoubleDict._collisions)
+ 
 if __name__ == "__main__":
     main() 

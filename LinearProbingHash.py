@@ -29,7 +29,6 @@ class LinearProbeHashMap(HashInterface.HashInterface):
     
     def _bucket_setitem(self,j,k,v):
         found, s = self._find_slot(j,k)
-        #print('found for slot: ',s)
         if not found:
             self._table[s] = self._Item(k,v)
             self._n+=1
