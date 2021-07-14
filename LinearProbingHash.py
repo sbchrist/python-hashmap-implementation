@@ -9,21 +9,13 @@ class LinearProbeHashMap(HashInterface.HashInterface):
         return self._table[j] is None #or self._table[j] is LinearProbeHashMap._AVAIL
 
     def _find_slot(self,j,k):
-        firstAvail = None
         i = copy.deepcopy(j)
         while True:
-           # print("finding for ",k)
             if self._is_available(i):
-                #if firstAvail is None:
-                #    firstAvail = j
-                #if self._table[j] is None:
-                    #return (False,firstAvail)
                 return (False,i)
             elif k == self._table[i]._key:
                 return (True,i)
-            
             self._collisions+=1
-            #print('collisions: ',self._collisions," key : ",k)
             i +=1
             i=i%len(self._table)
     
